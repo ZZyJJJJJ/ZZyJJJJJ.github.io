@@ -1,0 +1,316 @@
+@charset "utf-8";
+.head {
+	width: 100%;
+	float: none;
+	text-align: center;
+	clear: both;
+	background-color: rgba(255, 255, 255, 0);
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	height: 50px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-radius: 10px;
+	margin: 1px;
+}
+.foot {
+	width: 100%;
+	height: 40px;
+	float: none;
+	background-color: rgba(255, 255, 255, 0);
+	color:  rgba(255, 255, 255, 0.8);
+	font-size: large;
+	font-family: "黑体";
+	position: relative;
+	padding: 10px;
+	margin: 1px;
+	text-align: center;
+	clear: both;
+	font-weight: 100;
+}
+.hotlink {
+	width: 30%;
+	height: 25%;
+}
+.nav {
+	background-color: rgba(255, 255, 255, 0.25); 
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	font-style: normal;
+	margin: 1px;
+	font-weight: normal;
+}
+.nav_a1 {
+	color: #000000;
+	padding: 50px;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.nav_a2 {
+	padding: 50px;
+	color: #000000;
+	text-decoration: none;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+	transition: all .3s ease 0s;
+}
+.nav_a3 {
+	color: #000000;
+	padding: 50px;
+	text-decoration: none;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.nav_a4 {
+	color: #000000;
+	padding: 50px;
+	text-decoration: none;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.nav_a1:hover {
+	color: #FFFFFF;
+	font-style: normal;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+.nav_a2:hover {
+	color: #FFFFFF;
+}
+.container {
+	width: 30%;
+	height: 250px;
+	background-color: rgba(255, 255, 255, 0); 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s;
+	margin: 1.5%;
+	float: left;
+	color: #000000;
+	text-align: justify;
+	opacity: 1;
+}
+
+.container:hover {
+	transform: translateY(-30px); /* 向上滑动 20px，根据需要调整距离 */
+	color: #FFFFFF;
+}
+.container img {
+  display: block;
+  max-height: 100%;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.image {
+	max-height: 300px; /* 设置图片最大高度 */
+	margin-right: 20px; /* 图片与文字间距 */
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.description {
+  flex: 1; /* 让描述文字占据剩余空间 */
+}
+
+/* 可根据需要设置样式 */
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nav_a3:hover {
+	color: #FFFFFF;
+}
+.nav_a4:hover {
+	color: #FFFFFF;
+}
+
+/*
+body{
+	background-color: #8CEA80;
+}
+*/
+
+
+
+
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #e493d0;
+  background-image: 
+    radial-gradient(closest-side, rgba(0,255,255, 1), rgba(0,255,255, 0)),
+    radial-gradient(closest-side, rgba(127,255,170, 1), rgba(127,255,170, 0)),
+    radial-gradient(closest-side, rgba(254, 234, 131, 1), rgba(254, 234, 131, 0)),
+    radial-gradient(closest-side, rgba(170, 142, 245, 1), rgba(170, 142, 245, 0)),
+    radial-gradient(closest-side, rgba(248, 192, 147, 1), rgba(248, 192, 147, 0));
+  background-size: 
+    130vmax 130vmax,
+    80vmax 80vmax,
+    90vmax 90vmax,
+    110vmax 110vmax,
+    90vmax 90vmax;
+  background-position:
+    -80vmax -80vmax,
+    60vmax -30vmax,
+    10vmax 10vmax,
+    -30vmax -10vmax,
+    50vmax 50vmax;
+  background-repeat: no-repeat;
+  animation: 5s movement linear infinite;
+}
+body::after {
+  content: '';
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+@keyframes movement {
+  0%, 100% {
+    background-size: 
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position:
+      -80vmax -80vmax,
+      60vmax -30vmax,
+      10vmax 10vmax,
+      -30vmax -10vmax,
+      50vmax 50vmax;
+  }
+  25% {
+    background-size: 
+      100vmax 100vmax,
+      90vmax 90vmax
+      100vmax 100vmax,
+      90vmax 90vmax,
+      60vmax 60vmax;
+    background-position:
+      -60vmax -90vmax,
+      50vmax -40vmax
+      0vmax -20vmax,
+      -40vmax -20vmax,
+      40vmax 60vmax;
+  }
+    50% {
+    background-size: 
+      80vmax 80vmax,
+      110vmax 110vmax,
+      80vmax 80vmax,
+      60vmax 60vmax,
+      80vmax 80vmax;
+    background-position:
+      -50vmax -70vmax,
+      40vmax -30vmax,
+      10vmax 0vmax,
+      20vmax 10vmax,
+      30vmax 70vmax;
+  }
+    75% {
+    background-size: 
+      90vmax 90vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      70vmax 70vmax;
+    background-position:
+      -50vmax -40vmax,
+      50vmax -30vmax,
+      20vmax 0vmax,
+      -10vmax 10vmax,
+      40vmax 60vmax;
+  }
+}
+
+
+.imgne {
+	border-radius: 20px;
+	width: 100px;
+	height: 100px;
+}
+.div_other {
+	width: 40%;
+	height: 500px;
+	margin-top: 20px;
+	margin-right: 30px;
+	margin-left: 80px;
+	margin-bottom: 80px;
+/*	border: 2px solid #333;*/
+	float: left;
+}
+.imgtitle_other {
+	margin-top: 20px;
+	margin-right: 30px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+	border-radius: 20px;
+	float: left;
+	width: 100px;
+	height: 100px;
+	transition: transform 0.3s;
+}
+.imgtitle_other:hover {
+	transform: translateY(-15px); /* 向上滑动 20px，根据需要调整距离 */
+	color: #FFFFFF;
+}
+.divtitle_other {
+	float: left;
+	width: 400px;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	height: 130px;
+}
+
+/*图片轮播*/
+
+.carousel {
+	position: relative;
+	width: 620px; 
+	height: 300px; 
+	overflow: hidden;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+
