@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>双色球号码预测器</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+  }
+  .ball {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f00;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 10px;
+  }
+  .blue-ball {
+    background-color: #00f;
+  }
+</style>
+</head>
+<body>
+  <h1>双色球号码预测器</h1>
+  <button onclick="generateNumbers()">抽取号码</button>
+  <div id="result"></div>
+
+  <script>
+    function generateNumbers() {
+      var redBalls = [];
+      var blueBall;
+
+      // 生成6个红色球号码
+      while (redBalls.length < 6) {
+        var randomNumber = Math.floor(Math.random() * 33) + 1; // 生成1到33之间的随机整数
+        if (!redBalls.includes(randomNumber)) {
+          redBalls.push(randomNumber);
+        }
+      }
+
+      // 排序红色球号码
+      redBalls.sort(function(a, b) {
+        return a - b;
+      });
+
+      // 生成蓝色球号码
+      blueBall = Math.floor(Math.random() * 16) + 1; // 生成1到16之间的随机整数
+
+      // 显示结果
+      displayResult(redBalls, blueBall);
+    }
+
+    function displayResult(redBalls, blueBall) {
+      var resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '';
+
+      // 显示红色球号码
+      for (var i = 0; i < redBalls.length; i++) {
+        var redBallDiv = document.createElement('div');
+        redBallDiv.className = 'ball';
+        redBallDiv.textContent = redBalls[i].toString().padStart(2, '0'); // 补齐两位数，如01、02
+        resultDiv.appendChild(redBallDiv);
+      }
+
+      // 显示蓝色球号码
+      var blueBallDiv = document.createElement('div');
+      blueBallDiv.className = 'ball blue-ball';
+      blueBallDiv.textContent = blueBall.toString().padStart(2, '0');
+      resultDiv.appendChild(blueBallDiv);
+    }
+  </script>
+</body>
+</html>
